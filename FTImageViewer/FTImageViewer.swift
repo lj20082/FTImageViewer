@@ -353,7 +353,7 @@ public class FTImageViewer: NSObject, UIScrollViewDelegate, UIGestureRecognizerD
     //MARK: - saveImageDone
 
     @objc func saveImageDone(_ image: UIImage, error: Error, context: UnsafeMutableRawPointer?) {
-        self.tabBar.countLabel.text = NSLocalizedString("Save image done.", comment: "Save image done.")
+        self.tabBar.countLabel.text = "保存成功"
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(1.0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
             self.tabBar.countLabel.text = "\(self.currenIndex+1)/\(self.imageUrlArray.count)"
         })
